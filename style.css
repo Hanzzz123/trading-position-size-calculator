@@ -15,8 +15,35 @@
     background: linear-gradient(135deg, #4203a9, #90abfc);
     color: #fff;
     padding: 10px;
-
-
-
 }
+
+.row h1 {
+    font-size: 50px;
+}
+
+form row{
+    height: 58px;
+}
+
+.column{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+input[type = number], select{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 40px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/*.form-column{*/
+/*    width: 20%;*/
+/*   float: right;*/
+/*    height: 100%;*/
+/*}*/
 

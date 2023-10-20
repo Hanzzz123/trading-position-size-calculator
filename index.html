@@ -12,7 +12,8 @@
         <h1>Trade Position Size Calculator</h1>
         <h2>Calculate Risk Reward Ratio, Planned profit, and Planned and estimated lost on a single trade</h2>
         <div class="calculator-card">
-            <div class = "information-column">
+
+            <div class = "column">
                 <div class="row">
                     <h1>Entry Price: </h1>
                 </div>
@@ -29,11 +30,17 @@
                     <h1>Take Profit Price: </h1>
                 </div>
             </div>
-            <div class="form-column">
-                <div class="column">
+
+            <div class="column">
                     <form>
-                        <label for="fname">First name:</label>
-                        <input type="text" id="fname" name="fname"><br><br>
+                        <div class="row">
+                            <label for="fname"></label>
+                            <input type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.01" value="0.00" id="fname"/>
+                        </div>
+                        <div class="row">
+                            <label for="fname"></label>
+                            <input type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.01" value="0.00" id="fname"/>
+                        </div>
                     </form>
                 </div>
             </div>
