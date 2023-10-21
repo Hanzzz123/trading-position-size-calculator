@@ -13,7 +13,7 @@
         <h2>Calculate Risk Reward Ratio, Planned profit, and Planned and estimated lost on a single trade</h2>
         <div class="calculator-card">
 
-            <div class = "column">
+            <div class = "column1">
                 <div class="row">
                     <h1>Entry Price: </h1>
                 </div>
@@ -31,16 +31,32 @@
                 </div>
             </div>
 
-            <div class="column">
+            <div class="column2">
                     <form>
-                        <div class="row">
-                            <label for="fname"></label>
-                            <input type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.01" value="0.00" id="fname"/>
+                        <div class="row1">
+                            <label for="entryprice"></label>
+                            <input type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.01" value="0.00" id="entryprice"/>
                         </div>
                         <div class="row">
-                            <label for="fname"></label>
-                            <input type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.01" value="0.00" id="fname"/>
+                            <label for="positionsize"></label>
+                            <input type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.01" value="0.00" id="positionsize"/>
                         </div>
+                        <div class="row">
+                            <label for="long-short"></label>
+                            <select id="long-short" name="long-short">
+                                <option value="Long">Long</option>
+                                <option value="Short">Short</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <label for="positionsize"></label>
+                            <input type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.01" value="0.00" id="positionsize"/>
+                        </div>
+                        <div class="row">
+                            <label for="positionsize"></label>
+                            <input type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.01" value="0.00" id="positionsize"/>
+                        </div>
+
                     </form>
                 </div>
             </div>
