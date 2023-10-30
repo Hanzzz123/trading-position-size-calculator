@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Trading- Position-Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
 
@@ -32,7 +33,7 @@
             </div>
 
             <div class="column2">
-                    <form>
+                    <form id = "form">
                         <div class="row1">
                             <label for="entryprice"></label>
                             <input type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.01" value="0.00" id="entryprice"/>
@@ -59,14 +60,15 @@
 
                     </form>
                 <div class="row">
-                    <button>Calculate</button>
+                    <button onclick="result()">Calculate</button>
                 </div>
             </div>
         </div>
 
-        <div class ="result-card">
+        <div id ="result-card">
+            <div id="rrr">
 
-
+            </div>
         </div>
 
 
