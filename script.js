@@ -2,20 +2,13 @@ myHTMLNumberInput.onchange = setTwoNumberDecimal;
 const elementID = document.getElementById("result-card");
 
 function setTwoNumberDecimal(event) {
+
     this.value = parseFloat(this.value).toFixed(2);
 }
 
 function result(){
     createResultCard();
 
-}
-
-function createResultCard(){
-
-    const card = document.createElement("div");
-
-    document.getElementById("result-card").innerHTML = "<span class='result-card'</span>"
-    document.getElementById("rrr").innerHTML = calculateRiskReward();
 }
 
 //create the rrr function
@@ -30,5 +23,23 @@ function calculateRiskReward(){
 
     let riskReward = risk / profit;
 
-    return riskReward;
+    return "Your risk reward is " + "1: " + riskReward;
+}
+
+function createResultCard(){
+
+    const rrr = document.createElement("div");
+
+    // rrr.textContent = calculateRiskReward();
+
+    const card = document.getElementById("result-card");
+
+
+    card.innerHTML = "<span class='result-card'</span>" + calculateRiskReward();
+    //document.getElementById("result-card").innerHTML = "<span class='result-card'</span>"
+    // document.getElementById("rrr").innerHTML = calculateRiskReward();
+
+    card.appendChild(rrr);
+
+
 }
