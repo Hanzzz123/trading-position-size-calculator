@@ -26,6 +26,18 @@ function calculateRiskReward(){
     return "Your risk reward is " + "1: " + riskReward;
 }
 
+function calculateLongPotentialProfit(){
+
+    const entryPrice = document.getElementById("entryprice").value;
+    const positionSize = document.getElementById("positionsize").value;
+    const takeProfitPrice = document.getElementById("takeprofit").value;
+
+    const result = (takeProfitPrice - entryPrice) * positionSize;
+
+    return "Your potential profit is: " + result;
+
+}
+
 function createResultCard(){
 
     const rrr = document.createElement("div");
@@ -34,12 +46,11 @@ function createResultCard(){
 
     const card = document.getElementById("result-card");
 
+    card.innerHTML = "<span class='result-card'</span>" + calculateRiskReward() + calculateLongPotentialProfit();
 
-    card.innerHTML = "<span class='result-card'</span>" + calculateRiskReward();
     //document.getElementById("result-card").innerHTML = "<span class='result-card'</span>"
     // document.getElementById("rrr").innerHTML = calculateRiskReward();
 
     card.appendChild(rrr);
-
 
 }
