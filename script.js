@@ -35,7 +35,6 @@ function calculateLongPotentialProfit(){
     const result = (takeProfitPrice - entryPrice) * positionSize;
 
     return "Your potential profit is: " + result;
-
 }
 
 function createResultCard(){
@@ -46,11 +45,14 @@ function createResultCard(){
 
     const card = document.getElementById("result-card");
 
-    card.innerHTML = "<span class='result-card'</span>" + calculateRiskReward() + calculateLongPotentialProfit();
+    card.innerHTML = "<span class='result-card'</span>" + numberWithCommas(calculateRiskReward()) + numberWithCommas(calculateLongPotentialProfit());
 
     //document.getElementById("result-card").innerHTML = "<span class='result-card'</span>"
     // document.getElementById("rrr").innerHTML = calculateRiskReward();
 
     card.appendChild(rrr);
+}
 
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
